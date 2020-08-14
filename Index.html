@@ -188,10 +188,35 @@ th,td {
     The text is really long and the scrollbar is added to help the reader to scroll the content down the frame. This is just a test.
         
     </div> 
+<div class="main">
+        <button onclick="topFunction()" id="click" style="display:block"> Top </button>
+    </div>
 
     <footer class="footer"> 
         <h3> This site belongs to Emmanuel!</h3>
     </footer>
 
+    <script>
+        var click= document.getElementById("click");
+
+    window.onscroll = function() {scrollFunction() } ;
+
+    function scrollFunction() {
+        if(document.body.scrollTop >20 || document.documentElement.scrollTop >20)
+        {
+            click.style.display="block"; 
+        }
+        else{
+        click.style.display ="none";
+        }
+    }
+
+    function topFunction(){
+        document.body.scrollTop =0;
+        document.documentElement.scrollTop =0;
+
+    }
+
+    </script>
 </body>
 </html>
